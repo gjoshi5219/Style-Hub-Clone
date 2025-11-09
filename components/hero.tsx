@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ChevronDown, Phone } from "lucide-react"
 
+
 export default function Hero() {
   const scrollToNext = () => {
     const aboutSection = document.getElementById("about")
@@ -12,22 +13,45 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 bg-[rgba(5,0,14,1)]">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        {/* Geometric Logo */}
-        <div className="mb-8 inline-block">
-          <svg width="80" height="80" viewBox="0 0 80 80" className="mx-auto">
-            <defs>
-              <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: "#f59e0b", stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: "#b45309", stopOpacity: 1 }} />
-              </linearGradient>
-            </defs>
-            <polygon points="40,10 70,65 10,65" fill="none" stroke="url(#logoGradient)" strokeWidth="2" />
-            <polygon points="40,25 60,60 20,60" fill="none" stroke="url(#logoGradient)" strokeWidth="1.5" />
-            <text x="40" y="50" textAnchor="middle" fill="#f59e0b" fontSize="16" fontFamily="serif" fontWeight="bold">
-              TSH
-            </text>
-          </svg>
-        </div>
+  {/* Logo */}
+  <div className="mb-8 inline-block">
+  <svg width="250" height="250" viewBox="0 0 100 100" className="mx-auto">
+    <defs>
+      <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{ stopColor: "#f59e0b", stopOpacity: 1 }} />
+        <stop offset="100%" style={{ stopColor: "#b45309", stopOpacity: 1 }} />
+      </linearGradient>
+    </defs>
+
+    {/* Optional gradient border */}
+    <rect
+      x="1"
+      y="1"
+      width="98"
+      height="98"
+      fill="none"
+      stroke="url(#logoGradient)"
+      strokeWidth="2"
+      rx="6"
+    />
+
+    {/* Image fills entire area */}
+    <image
+      href="/logo.png"  // ✅ inside /public folder
+      x="0"
+      y="0"
+      width="100"
+      height="100"
+      preserveAspectRatio="xMidYMid slice"
+      style={{
+        borderRadius: "6px", // soft corners (remove if you want sharp)
+      }}
+    />
+  </svg>
+</div>
+
+
+
 
         <h1 className="text-6xl md:text-7xl font-serif font-bold mb-4 text-neutral-50">Welcome to The Style Hub</h1>
         <p className="text-xl md:text-2xl text-neutral-400 mb-8 font-light">Where Style Meets Excellence</p>

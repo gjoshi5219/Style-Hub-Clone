@@ -8,10 +8,20 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative">
-            <img src="/luxury-salon-interior-with-mirrors-and-lighting.jpg" alt="Salon interior" className="w-full rounded-lg" />
-            <div className="absolute inset-0 border border-amber-500/30 rounded-lg"></div>
-          </div>
+         <div className="relative">
+  <video
+    src="/salon-video.mp4"    // ✅ replace with your video file name (in /public)
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full rounded-lg object-cover"
+  ></video>
+
+  {/* Border overlay */}
+  <div className="absolute inset-0 border border-amber-500/30 rounded-lg"></div>
+</div>
+
 
           {/* Content */}
           <div className="space-y-6">
